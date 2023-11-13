@@ -26,4 +26,3 @@ jobs:
           cd /root/projects/authrex-client
           git pull origin main
           git status
-          systemctl restart authrex-client.service
