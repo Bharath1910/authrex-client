@@ -1,7 +1,7 @@
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 const repeat = document.getElementById('repeatPassword');
-const coa = document.getElementById('signup');
+const coa = document.getElementById('signupButton');
 
 const url = 'https://authrexapi.bharathshanmugam.dev';
 
