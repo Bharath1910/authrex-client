@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+body{
+    text-align: center;
+}
+
+#firstcontainer{
+    text-align: center;
+    padding: 0 7% 0 7%;
+    margin: 5% 0 2% 0;
+}
+
+#firstcontainer h1{
+    font-family: 'Montserrat';
+}
+
+.navigatorbar{
+    background-color: #a7ebf3;
+    color: black;
+}
+
+.title{
+    font-family: 'Ubuntu';
+    color: black;
+}
+
+.signoutbtn {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.signoutbtn:hover,
+.signoutbtn:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.signoutbtn:hover {
+  transform: translateY(-1px);
+}
+
+.signoutbtn:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(151, 133, 133, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+#secondcontainer{
+    padding: 0 7% 0 7%;
+    display: block;
+    text-align: center;
+
+}
+
+.options{
+    margin-bottom: 2%;
+}
+
+#update {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#update:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.checkboxwrapper .chkbox {
+    appearance: none;
+    background-color: #dfe1e4;
+    border-radius: 72px;
+    border-style: none;
+    flex-shrink: 0;
+    height: 20px;
+    margin: 0;
+    position: relative;
+    width: 30px;
+  }
+
+  .checkboxwrapper .chkbox::before {
+    bottom: -6px;
+    content: "";
+    left: -6px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+  }
+
+  .checkboxwrapper .chkbox,
+  .checkboxwrapper .chkbox::after {
+    transition: all 100ms ease-out;
+  }
+
+  .checkboxwrapper .chkbox::after {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 14px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 14px;
+  }
+
+  .checkboxwrapper input[type=checkbox] {
+    cursor: default;
+  }
+
+  .checkboxwrapper .chkbox:hover {
+    background-color: #c9cbcd;
+    transition-duration: 0s;
+  }
+
+  .checkboxwrapper .chkbox:checked {
+    background-color: #6e79d6;
+  }
+
+  .checkboxwrapper .chkbox:checked::after {
+    background-color: #fff;
+    left: 13px;
+  }
+
+  .checkboxwrapper :focus:not(.focus-visible) {
+    outline: 0;
+  }
+
+  .checkboxwrapper .chkbox:checked:hover {
+    background-color: #535db3;
+  }
+
+  .textoptions{
+    font-family: 'Arial';
+    font-size: 20px;
+    margin: 0 0 2% 1%;
+    position: relative;
+    bottom: 3px;
+  }
+
+
+
+
