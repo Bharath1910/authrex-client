@@ -5,6 +5,7 @@ const emailAuth = document.getElementById("email_auth");
 const pgpAuth = document.getElementById("pgp_auth");
 const update = document.getElementById("update");
 const token_gen = document.getElementById("token_gen");
+const signout = document.getElementById("signout");
 
 // const url = 'https://authrexapi.bharathshanmugam.dev';
 const url = 'http://localhost:5000';
@@ -28,6 +29,10 @@ function getCookie(name) {
 			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
 	}
 	return null;
+}
+
+function eraseCookie(name) {   
+	document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
 const token = getCookie('token');
@@ -63,3 +68,11 @@ function fetchToken() {
 
 
 token_gen.addEventListener('click', fetchToken);
+
+signout.addEventListener('click', (e) => {
+	eraseCookie('token');
+	eraseCookie('id');
+	eraseCookie('name');
+	alert("Signed out successfully");
+	window.location.href = '../login';
+});
