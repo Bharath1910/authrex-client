@@ -1,6 +1,6 @@
 const username = document.getElementById('username');
 const password = document.getElementById('password');
-const coa = document.getElementById('signupButton');
+const coa = document.getElementById('login');
 
 // const url = 'https://authrexapi.bharathshanmugam.dev';
 const url = 'http://localhost:5000';
@@ -41,9 +41,9 @@ coa.addEventListener('click', (e) => {
 		}
 
 		res.json().then(data => {
-			setCookie('token', data.token, 1);
-			setCookie('id', data.id, 1);
-			setCookie('name', data.username, 1);
+			setCookie('token', data.token);
+			setCookie('id', data.id);
+			setCookie('name', data.username);
 			window.location.href = '../dashboard';
 		})
 	})
