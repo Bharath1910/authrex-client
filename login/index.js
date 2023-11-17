@@ -1,8 +1,9 @@
 const username = document.getElementById('username');
 const password = document.getElementById('password');
-const coa = document.getElementById('signupButton');
+const coa = document.getElementById('login');
 
-const url = 'https://authrexapi.bharathshanmugam.dev';
+// const url = 'https://authrexapi.bharathshanmugam.dev';
+const url = 'http://localhost:5000';
 
 // https://gist.github.com/Bharath1910/b322bb7cab80492a7d5d51ac378b5018
 function setCookie(name, value, days) {
@@ -40,7 +41,9 @@ coa.addEventListener('click', (e) => {
 		}
 
 		res.json().then(data => {
-			setCookie('token', data.token, 1);
+			setCookie('token', data.token);
+			setCookie('id', data.id);
+			setCookie('name', data.username);
 			window.location.href = '../dashboard';
 		})
 	})
