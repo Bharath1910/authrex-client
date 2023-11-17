@@ -38,7 +38,7 @@ function sendClient(token, callback) {
 		body: JSON.stringify(data),
 	})
 	.then(res => {
-		window.location.replace("http://localhost.com/callback");
+		window.location.replace(callback);
 	})
 	.catch(err => {
 		console.log(err);
