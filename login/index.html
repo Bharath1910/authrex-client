@@ -7,13 +7,18 @@
     <title>Authrex</title>
     <script src="./index.js" defer></script>
     <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1 id="title">Authrex</h1>
-        <input type="text" id="username" placeholder="Username">
-        <input type="password" id="password" placeholder="Password">
-        <button id="login">Login</button>
+    <div class="box">
+        <div id="container">
+            <h1 id="title">Authrex</h1>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login">Login</button>
+        </div>
+        <p id="error_box"><ion-icon name="warning-outline"></ion-icon> <span id="error">helllo nwin</span></p>
     </div>
 </body>
 </html>

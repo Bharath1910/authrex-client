@@ -16,6 +16,14 @@ function setCookie(name, value, days) {
 	document.cookie = name + "=" + (value || "")  + expires + "; path=/";
 }
 
+function throwError(msg) {
+	const errBox = document.getElementById('error_box');
+	errBox.style.visibility = 'visible';
+	
+	const err = document.getElementById('error');
+	err.innerHTML = msg;
+}
+
 coa.addEventListener('click', (e) => {
 	const data = {
 		username: username.value,
@@ -31,12 +39,12 @@ coa.addEventListener('click', (e) => {
 	})
 	.then(res => {
 		if (res.status === 404) {
-			alert("Username does not exist");
+			throwError("User not found");
 			return;
 		}
 
 		if (res.status === 401) {
-			alert("Incorrect password");
+			throwError("Incorrect password");
 			return;
 		}
 

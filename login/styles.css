@@ -28,7 +28,9 @@ input {
 	font-size: 40px;
 	font-weight: 700;
 	line-height: 20px;
+	color: #2e2e2e;
 }
+
 
 #container {
 	height: 300px;
@@ -36,11 +38,6 @@ input {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-}
-
-#login:hover {
-		background-color: #0353e9;
-		color: #fff;
 }
 
 #login {
@@ -57,4 +54,19 @@ input {
 #login:hover {
 	background-color: #1d7838;
 	color: #fff;
+}
+
+#error_box {
+	visibility: hidden;
+	color: #b83535;
+}
+
+ion-icon {
+	font-size: 20px;
+	vertical-align: middle;
+}
+
+#error {
+	vertical-align: middle;
+	font-family: 'Poppins', sans-serif;
 }
