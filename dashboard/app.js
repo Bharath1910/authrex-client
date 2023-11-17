@@ -8,8 +8,8 @@ const update = document.getElementById("update_callback");
 const token_gen = document.getElementById("regen_key");
 const signout = document.getElementById("signout");
 
-// const url = 'https://authrexapi.bharathshanmugam.dev';
-const url = 'http://localhost:5000';
+const url = 'https://authrexapi.bharathshanmugam.dev';
+// const url = 'http://localhost:5000';
 
 function setCookie(name,value,days) {
 	var expires = "";

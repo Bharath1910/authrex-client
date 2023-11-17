@@ -2,8 +2,8 @@ const username = document.getElementById('username');
 const password = document.getElementById('password');
 const coa = document.getElementById('login');
 
-// const url = 'https://authrexapi.bharathshanmugam.dev';
-const url = 'http://localhost:5000';
+const url = 'https://authrexapi.bharathshanmugam.dev';
+// const url = 'http://localhost:5000';
 
 // https://gist.github.com/Bharath1910/b322bb7cab80492a7d5d51ac378b5018
 function setCookie(name, value, days) {
