@@ -52,7 +52,7 @@ nav > div > h1 {
 
 .basic_info {
   display: flex;
-  height: 150px;
+  height: 250px;
   margin-top: 30px;
   padding: 10px;
   border: 1px solid #000;
@@ -88,4 +88,16 @@ input {
   padding: 7px 20px;
   font-size: 14px;
   margin-left: 10px;
+}
+
+.secret_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.regenerate {
+  padding: 4px 20px;
+  font-size: 14px;
+  margin-right: 40px;
 }

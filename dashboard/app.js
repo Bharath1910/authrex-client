@@ -1,11 +1,11 @@
 const username = document.getElementById("username");
 const userid = document.getElementById("client_id");
 const userid_info = document.getElementById("client_id_info");
-const api_key = document.getElementById("secret");
+const api_key = document.getElementById("client_secret");
 const emailAuth = document.getElementById("email_auth");
 const pgpAuth = document.getElementById("pgp_auth");
-const update = document.getElementById("update");
-const token_gen = document.getElementById("token_gen");
+const update = document.getElementById("update_callback");
+const token_gen = document.getElementById("regen_key");
 const signout = document.getElementById("signout");
 
 // const url = 'https://authrexapi.bharathshanmugam.dev';
@@ -40,6 +40,22 @@ const token = getCookie('token');
 const id = getCookie('id');
 const user = getCookie('name');
 const api_key_cookie = getCookie('api_key');
+
+console.log(api_key_cookie);
+
+if (!api_key_cookie) {
+	fetch(`${url}/key?t=get`, {
+		headers: {
+			'Authorization': `Bearer ${token}`
+		}
+	})
+	.then(res => {
+		res.json().then(data => {
+			setCookie('api_key', data.token);
+			api_key.innerText = data.token;
+		})
+	})
+}
 
 if (!token) {
 	window.location.href = '../login';
@@ -77,4 +93,25 @@ signout.addEventListener('click', (e) => {
 	eraseCookie('name');
 	alert("Signed out successfully");
 	window.location.href = '../login';
+});
+
+update.addEventListener('click', (e) => {
+	const callback_url = document.getElementById("callback_url").value;
+	fetch(`${url}/user?redirect=${callback_url}`, {
+		headers: {
+			'Authorization': `Bearer ${token}`
+		},
+		method: 'POST'
+	}).then(res => {
+		if (res.status === 401) {
+			alert("Invalid token");
+			return;
+		}
+
+		if (res.status === 204) {
+			alert("Callback updated successfully");
+		}
+	}).catch(err => {
+		console.log(err);
+	})
 });

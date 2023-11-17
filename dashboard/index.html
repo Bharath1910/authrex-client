@@ -15,8 +15,8 @@
     </nav>
 
     <div class="user_info">
-        <div><h1>Hello <span class="username"></span></h1></div>
-        <div><p>Client ID: <span id="client_id"></span></p></div>
+        <div><h1>Hello <span id="username"></span></h1></div>
+        <div><p>Client ID: <span id="client_id">sss</span></p></div>
     </div>
 
     <div class="info">
@@ -27,7 +27,7 @@
             <div class="info_subbox">
                 <div class="info_box">
                     <input type="text" id="callback_url" placeholder="Callback URL">
-                    <button class="button redirect_button">Update</button>
+                    <button id="update_callback" class="button redirect_button">Update</button>
                 </div>
 
                 <div class="info_box">
@@ -36,7 +36,11 @@
                 </div>
 
                 <div class="info_box">
-                    <p>Client Secret</p>
+                    <div class="secret_box">
+                        <p>Client Secret</p>
+                        <button id="regen_key" class="button regenerate">Regenerate</button>
+                    </div>
+                    <p id="client_secret"></p>
                 </div>
             </div>
         </div>
