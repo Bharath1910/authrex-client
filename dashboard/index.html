@@ -5,37 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authrex</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
     <script src="./app.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark navigatorbar">
-        <div class="container-fluid">
-          <h3 class="title">Authrex</h3>
-          <div id="signout"><button class="signoutbtn">Signout</button></div>
-        </div>
+    <nav>
+        <div><h1 class="title">Authrex</h1></div>
+        <div><button class="button" id="signout">Signout</button></div>
     </nav>
 
-    <section id="firstcontainer">
-        <h1>Hello <span id="username">User</span></h1>
-        <h3>User ID: <span id="uid"></span></h3>
-        <h3>API Key: <span id="secret"></span></h3>
-        <button id="token_gen" type="button">refresh/generate token</button>
-    </section>
+    <div class="user_info">
+        <div><h1>Hello <span class="username"></span></h1></div>
+        <div><p>Client ID: <span id="client_id"></span></p></div>
+    </div>
 
-    <section id="secondcontainer">
-        <div class="checkboxwrapper">
-            <input class="options chkbox" id="email_auth" type="checkbox">
-            <label class="textoptions" for="email_auth"> Email Authentication </label>
-        </div>
-        <div class="checkboxwrapper">
-            <input class="options chkbox" id="pgp_auth" type="checkbox">
-            <label class="textoptions" for="pgp_auth"> PGP Authentication </label>
-        </div>
-        <button id="update" role="button">Update Options</button>
+    <div class="info">
+        <div class="basic_info">
+            <div>
+                <h1>Basic Information</h1>
+            </div>
+            <div class="info_subbox">
+                <div class="info_box">
+                    <input type="text" id="callback_url" placeholder="Callback URL">
+                    <button class="button redirect_button">Update</button>
+                </div>
 
-    </section>
+                <div class="info_box">
+                    <p>Client ID</p>
+                    <p id="client_id_info"></p>
+                </div>
+
+                <div class="info_box">
+                    <p>Client Secret</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

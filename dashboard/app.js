@@ -1,5 +1,6 @@
 const username = document.getElementById("username");
-const userid = document.getElementById("uid");
+const userid = document.getElementById("client_id");
+const userid_info = document.getElementById("client_id_info");
 const api_key = document.getElementById("secret");
 const emailAuth = document.getElementById("email_auth");
 const pgpAuth = document.getElementById("pgp_auth");
@@ -46,6 +47,7 @@ if (!token) {
 
 username.innerText = user;
 userid.innerText = id;
+userid_info.innerText = id;
 
 function fetchToken() {
 	fetch(`${url}/key?t=generate`, {
