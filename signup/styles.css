@@ -1,9 +1,76 @@
-body{
-    background-color: #eefdfe;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.company{
-    font-size: 35px;
-    text-align: center;
-    padding: 5% 0 0 0;
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+input {
+	width: 100%;
+	height: 15%;
+	border: none;
+	border-bottom: 1px solid #000;
+	outline: none;
+	font-size: 16px;
+	padding-bottom: 1px;
+}
+
+#title {
+	font-family: 'Poppins', sans-serif;
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 20px;
+    color: #2e2e2e;
+}
+
+#container {
+	height: 340px;
+	width: 270px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#signup {
+	outline: none;
+	background: none;
+	border: 1px solid #1d7838;
+	padding: 15px 20px;
+	text-align: left;
+	color: #1d7838;
+	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
+}
+
+#signup:hover {
+	background-color: #1d7838;
+	color: #fff;
+}
+
+#login_instead {
+	font-size: 14px;
+	margin: 10px 0px;
+}
+
+#error_box {
+	visibility: hidden;
+	color: #b83535;
+}
+
+ion-icon {
+	font-size: 20px;
+	vertical-align: middle;
+}
+
+#error {
+	vertical-align: middle;
+	font-family: 'Poppins', sans-serif;
 }

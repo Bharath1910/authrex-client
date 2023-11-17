@@ -1,13 +1,21 @@
 const username = document.getElementById('username');
 const password = document.getElementById('password');
-const repeat = document.getElementById('repeatPassword');
-const coa = document.getElementById('signupButton');
+const repeat = document.getElementById('re_password');
+const coa = document.getElementById('signup');
 
 const url = 'https://authrexapi.bharathshanmugam.dev';
 
+function throwError(msg) {
+	const errBox = document.getElementById('error_box');
+	errBox.style.visibility = 'visible';
+	
+	const err = document.getElementById('error');
+	err.innerHTML = msg;
+}
+
 coa.addEventListener('click', (e) => {
 	if (password.value != repeat.value) {
-		alert("Passwords do not match");
+		throwError("Passwords does not match");
 		return;
 	}
 
@@ -25,12 +33,11 @@ coa.addEventListener('click', (e) => {
 	})
 	.then(res => {
 		if (res.status === 204) {
-			alert("Account created successfully");
 			window.location.href = '../login';
 		}
 
 		if (res.status === 409) {
-			alert("Username already exists");
+			throwError("Username already exists");
 		}
 	})
 });
