@@ -2,6 +2,7 @@ const username = document.getElementById('username');
 const password = document.getElementById('password');
 const repeat = document.getElementById('re_password');
 const coa = document.getElementById('signup');
+const parameters = new URLSearchParams(window.location.search);
 
 const url = 'https://authrexapi.bharathshanmugam.dev';
 
@@ -24,7 +25,16 @@ coa.addEventListener('click', (e) => {
 		password: password.value
 	};
 
-	fetch(`${url}/signup?type=user`, {
+	let query = `${url}/signup`;
+	if (parameters.has('t')) {
+		query += `?type=client&token=${parameters.get('t')}`;
+		console.log(parameters.get('t'));
+	} else {
+		query += '?type=user';
+		console.log("nope")
+	}
+
+	fetch(query, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json'
@@ -33,6 +43,10 @@ coa.addEventListener('click', (e) => {
 	})
 	.then(res => {
 		if (res.status === 204) {
+			if (parameters.has('t')) {
+				window.location.href = `../login/index.html?t=${parameters.get('t')}`;
+				return;
+			}
 			window.location.href = '../login';
 		}
 
