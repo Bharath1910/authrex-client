@@ -101,3 +101,19 @@ input {
   font-size: 14px;
   margin-right: 40px;
 }
+
+.client_box {
+  margin-top: 30px;
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+.client_details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+.client_header {
+  margin-bottom: 30px;
+}

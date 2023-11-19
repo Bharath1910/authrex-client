@@ -115,3 +115,24 @@ update.addEventListener('click', (e) => {
 		console.log(err);
 	})
 });
+
+
+const clientBox = document.getElementById("client_box");
+
+fetch(`${url}/user`, {
+	headers: {
+		'Authorization': `Bearer ${token}`
+	}
+})
+.then(res => res.json())
+.then(data => {
+	console.log(data);
+	data.forEach(client => {
+		clientBox.innerHTML += `
+		<div class="client_details">
+			<div>${client.id}</div>
+			<div>${client.username}</div>
+		</div>
+		`
+	})
+})
